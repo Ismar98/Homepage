@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quadrilha Maçã do Amor</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url(imagens/background.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background: rgba(179, 0, 0, 0.9);
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+    nav {
+      background: #008000;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+    }
+    nav a {
+      text-decoration: none;
+      color:white;
+      font-weight: bold;
+    }
+    section {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+      border-radius: 10px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+   .carrossel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  max-width: 800px;
+  margin: auto;
+}
+
+.carrossel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carrossel-container img {
+  min-width: 100%;
+  border-radius: 10px;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 24px;
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+    .evento {
+      margin-bottom: 20px;
+      
+    }
+    .patrocinadores {
+      background: rgba(255, 240, 240, 0.9);
+      padding: 30px 20px;
+      text-align: center;
+      border-radius: 10px;
+      max-width: 1000px;
+      margin: auto;
+      margin-bottom: 30px;
+    }
+    .patrocinadores img {
+      height: 80px;
+      margin: 10px;
+
+    }
+
+    .redes-sociais a {
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      color: #b30000;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 800px;
+      margin: 30px auto 0;
+      aspect-ratio: 16 / 9;
+    }
+    .video-container video {
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    footer {
+  background: #008000;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Quadrilha Maçã do Amor</h1>
+    <p>Criatividade e Originalidade!</p>
+    
+  </header>
+
+  <nav>
+    <a href="#historia">Nossa História</a>
+    <a href="#carrossel">Fotos</a>
+    <a href="#agenda">Agenda</a>
+  </nav>
+
+  <section id="historia">
+    <h2>NOSSA HISTÓRIA</h2>
+    <p>A Quadrilha Maçã do Amor é um símbolo de tradição no município de Gurupá desde 1989. Com uma trajetória marcada por amor à cultura popular, criatividade e dedicação, a quadrilha detém a conquista de hendacampeã, sendo reconhecida pela sua animação contagiante e apresentações impecáveis. As cores verde, vermelho e branco estampam com orgulho seus figurinos, representando a força, a paixão e a pureza dessa história. Com cada passo e sorriso no arraial, a Maçã do Amor celebra a alma nortista e mantém viva a chama das festas juninas.</p>
+  </section>
+
+  <section id="carrossel">
+    <h2>FOTOS</h2>
+   <div class="carrossel" onmouseenter="pausarAuto()" onmouseleave="retomarAuto()">
+  <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+  <div class="carrossel-container" id="carrosselContainer">
+    <img src="imagens/1.jpg" alt="Dançarino 1">
+    <img src="imagens/2.jpg" alt="Dançarino 2">
+    <img src="imagens/3.jpg" alt="Dançarino 3">
+    <img src="imagens/4.jpg" alt="Dançarino 4">
+    <img src="imagens/5.jpg" alt="Dançarino 5">
+  </div>
+  <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+</div>
+
+
+    </div>
+     <div class="video-container">
+        <h2>ASSISTA UM POUQUINHO DA NOSSA APRESENTAÇÃO</h2>
+      <video controls>
+        <source src="videos/1.mp4" type="video/mp4">
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
+    </div>
+
+  </section>
+
+  <section id="agenda">
+    <h2>PRÓXIMOS EVENTOS</h2>
+    <div class="evento">
+      <h3>Festival Junino - 06/06/2025</h3>
+      <p>Quadra Mariocay - Gurupá, Pa</p>
+    </div>
+    <div class="evento">
+      <h3>Terreirão das Escolas - Data a definir</h3>
+      <p>Local a definir- Gurupá, PA</p>
+    </div>
+    <div class="evento">
+      <h3>Concurso de Quadrilhas - Data a definir</h3>
+      <p>Ginásio Municipal -  Gurupá, PA</p>
+    </div>
+  </section>
+
+  <section class="patrocinadores">
+    <h2>PATROCINADORES</h2>
+    <img src="patrocinadores/patrocinio.png" alt="Patrocinador 1">
+    
+  </section>
+
+  <section class="patrocinio-form">
+  <h2>QUER SER UM PATROCINADOR?</h2>
+  <p>Deixe seu e-mail e entraremos em contato:</p>
+  <form onsubmit="return validarEmail()">
+    <input type="email" id="email" placeholder="Digite seu e-mail" required>
+    <button type="submit">Enviar</button>
+    <p id="mensagem" style="margin-top:10px;"></p>
+  </form>
+</section>
+
+   <section class="redes-sociais">
+    <h2>SIGA A GENTE</h2>
+    <a href="https://www.instagram.com/macadoamor__oficial/" target="_blank">Instagram</a>
+    <a href="https://www.facebook.com/macadoamor__oficial" target="_blank">Facebook</a>
+  </section>
+
+  <footer>
+  <p>&copy; 2025 Quadrilha Maçã do Amor - Todos os direitos reservados.</p>
+  <p>Feito com ❤️ por apaixonados pela cultura junina.</p>
+</footer>
+
+
+  <script>
+    
+  function validarEmail() {
+    const email = document.getElementById('email').value;
+    const mensagem = document.getElementById('mensagem');
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (regex.test(email)) {
+      mensagem.style.color = "green";
+      mensagem.textContent = "Obrigado! Entraremos em contato.";
+      return false; // Evita envio real para manter a página no lugar
+    } else {
+      mensagem.style.color = "red";
+      mensagem.textContent = "Por favor, insira um e-mail válido.";
+      return false;
+    }
+  }
+  
+  let slideIndex = 0;
+  const container = document.getElementById('carrosselContainer');
+  const slides = container.querySelectorAll('img');
+  const totalSlides = slides.length;
+  let intervalo;
+
+  function atualizarSlide() {
+    container.style.transform = `translateX(-${slideIndex * 100}%)`;
+  }
+
+  function mudarSlide(direcao) {
+    slideIndex += direcao;
+    if (slideIndex < 0) slideIndex = totalSlides - 1;
+    if (slideIndex >= totalSlides) slideIndex = 0;
+    atualizarSlide();
+  }
+
+  function iniciarAuto() {
+    intervalo = setInterval(() => {
+      mudarSlide(1);
+    }, 5000); // Troca a cada 5 segundos
+  }
+
+  function pausarAuto() {
+    clearInterval(intervalo);
+  }
+
+  function retomarAuto() {
+    iniciarAuto();
+  }
+
+  // Inicia a rotação automática ao carregar
+  window.addEventListener('load', iniciarAuto);
+
+
+</script>
+
+</body>
+</html>
